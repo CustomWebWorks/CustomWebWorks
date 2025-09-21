@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CustomWebWorks</title>
+<style>
+  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; }
+  header { background:#2c3e50; color:white; text-align:center; padding:2rem 1rem; }
+  header h1 { margin:0; font-size:2.5rem; }
+  header p { font-size:1.2rem; }
+  nav { background:#34495e; text-align:center; padding:0.8rem; }
+  nav a { color:white; margin:0 1rem; text-decoration:none; font-weight:bold; }
+  nav a:hover { text-decoration:underline; }
+  section { max-width:900px; margin:auto; padding:2rem; }
+  h2 { border-bottom:2px solid #ddd; padding-bottom:0.5rem; color:#2c3e50; }
+  .deals { background:#e74c3c; color:white; padding:1rem; text-align:center; margin-bottom:2rem; border-radius:8px; }
+  .pricing { display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; }
+  .plan { background:white; padding:1.5rem; margin:1rem; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); width:250px; text-align:center; }
+  .plan h3 { margin-top:0; color:#34495e; }
+  .plan .price { font-size:1.5rem; font-weight:bold; color:#27ae60; margin:1rem 0; }
+  .plan button { background:#27ae60; color:white; border:none; padding:0.8rem 1.2rem; border-radius:5px; cursor:pointer; font-size:1rem; }
+  .plan button:hover { background:#2ecc71; }
+  footer { background:#2c3e50; color:white; text-align:center; padding:1rem; margin-top:2rem; }
+  .contact p { margin:0.5rem 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>CustomWebWorks</h1>
+  <p>Your Website. Your Way. Simple, Custom, Done for You.</p>
+</header>
+
+<nav>
+  <a href="#deals">Deals</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="deals">
+  <div class="deals">
+    <h2>GOOD DEALS!</h2>
+    <p>Sign up today and get your first month discounted!</p>
+  </div>
+</section>
+
+<section id="pricing">
+  <h2>Pricing Plans</h2>
+  <div class="pricing">
+    <div class="plan">
+      <h3>Basic</h3>
+      <p class="price">$10 / month</p>
+      <p>Hosting + Domain</p>
+      <button onclick="pay('10','Basic')">Pay Basic</button>
+    </div>
+    <div class="plan">
+      <h3>Standard</h3>
+      <p class="price">$15 / month</p>
+      <p>Hosting + Domain + 1 Update</p>
+      <button onclick="pay('15','Standard')">Pay Standard</button>
+    </div>
+    <div class="plan">
+      <h3>Full Service</h3>
+      <p class="price">$20 / month</p>
+      <p>Hosting + Domain + Unlimited Updates + Full Support</p>
+      <button onclick="pay('20','Full Service')">Pay Full Service</button>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About CustomWebWorks</h2>
+  <p>
+    Hi! I’m a web developer offering simple, affordable websites for people who don’t want to deal with complicated builders like Wix. 
+    I handle everything: hosting, domain, updates, and backups. You just send me your content, and I put it online for you.
+  </p>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact">
+    <p>Email: <strong>youremail@example.com</strong></p>
+    <p>Facebook: <strong>Your Facebook Page</strong></p>
+    <p>Payments are made via Cash App. (Parent/guardian handles payments.)</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 CustomWebWorks — All rights reserved.</p>
+</footer>
+
+<script>
+function pay(amount, plan) {
+    // Replace RANDOMUSER with your Cash App $Cashtag later
+    let cashAppUsername = "RANDOMUSER"; 
+    
+    // Opens Cash App with pre-filled amount and note
+    let url = `https://cash.app/$${cashAppUsername}/${amount}?note=Payment%20for%20${plan}%20plan`;
+    window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
