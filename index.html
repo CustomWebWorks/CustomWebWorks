@@ -93,11 +93,11 @@
 
 <script>
 function pay(amount, plan) {
-    // Replace RANDOMUSER with your Cash App $Cashtag later
-    let cashAppUsername = "RANDOMUSER"; 
+    // Cash App $Cashtag
+    let cashAppUsername = "BETCHA0007"; 
     
-    // Opens Cash App with pre-filled amount and note
-    let url = `https://cash.app/$${cashAppUsername}/${amount}?note=Payment%20for%20${plan}%20plan`;
+    // Opens Cash App link with pre-filled note
+    let url = `https://cash.app/$${cashAppUsername}?note=Payment%20for%20${plan}%20plan%20$${amount}`;
     window.open(url, '_blank');
 }
 </script>
